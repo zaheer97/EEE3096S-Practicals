@@ -34,7 +34,7 @@ GPIO.setup(27, GPIO.OUT) #GPIO pin 27 is set up as an output
 #threaded callback function for falling egde event on GPIO pin 23
 def my_callback(channel):
     global z
-    if z >= 7: #when index of array exceeds the last index, the index is set to zero to make a loop
+    if z >= 7: #when index of array exceeds the last index(7), the index is set to zero to make a loop
        z = 0
     else:
        z += 1 #increments the index/counter by 1
@@ -42,7 +42,7 @@ def my_callback(channel):
 #threaded callback function for falling egde event on GPIO pin 24
 def my_callback2(channel):
     global z
-    if z <= 0: #when index of array becomes less than the first index, the index is set to seven to make a loop
+    if z <= 0: #when index of array becomes less than the first index(0), the index is set to seven to make a loop
        z = 7
     else:
        z -= 1 #decrements the index/counter by 1
